@@ -1,0 +1,13 @@
+# .gitignore
+target/
+test-output/
+logs/
+screenshots/
+*.log
+.idea/
+*.iml
+.classpath
+.project
+.settings/
+bin/
+.DS_Store

@@ -1,0 +1,38 @@
+
+{
+"validLogin": {
+"username": "valid_user@example.com",
+"password": "ValidPass123",
+"expectedMessage": "Welcome to Dashboard"
+},
+"invalidLogin": {
+"username": "invalid_user@example.com",
+"password": "WrongPassword",
+"expectedMessage": "Invalid username or password"
+},
+"emptyFields": {
+"username": "",
+"password": "",
+"expectedMessage": "Username and password are required"
+},
+"invalidUsername": {
+"username": "nonexistent@example.com",
+"password": "ValidPass123",
+"expectedMessage": "User not found"
+},
+"invalidPassword": {
+"username": "valid_user@example.com",
+"password": "wrongpass",
+"expectedMessage": "Invalid password"
+},
+"specialCharacters": {
+"username": "user@example.com",
+"password": "P@ssw0rd!@#",
+"expectedMessage": "Welcome to Dashboard"
+},
+"longCredentials": {
+"username": "very_long_username_that_exceeds_normal_limits@example.com",
+"password": "VeryLongPasswordThatExceedsNormalLimitsAndShouldBeHandledProperly123!@#",
+"expectedMessage": "Invalid credentials"
+}
+}

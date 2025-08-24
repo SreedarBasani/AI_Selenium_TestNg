@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="SeleniumTestSuite" parallel="tests" thread-count="3">
+    <parameter name="browser" value="chrome" />
+
+    <listeners>
+        <listener class-name="com.framework.listeners.TestListener" />
+    </listeners>
+
+    <test name="LoginTests" preserve-order="true">
+        <classes>
+            <class name="com.automation.tests.LoginTest">
+                <methods>
+                    <include name="testValidLogin" />
+                    <include name="testInvalidLogin" />
+                    <include name="testEmptyFieldsLogin" />
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="SmokeTests">
+        <groups>
+            <run>
+                <include name="smoke" />
+            </run>
+        </groups>
+        <packages>
+            <package name="com.tests.*" />
+        </packages>
+    </test>
+
+    <test name="RegressionTests">
+        <groups>
+            <run>
+                <include name="regression" />
+            </run>
+        </groups>
+        <packages>
+            <package name="com.tests.*" />
+        </packages>
+    </test>
+</suite>
